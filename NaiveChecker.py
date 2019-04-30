@@ -21,8 +21,8 @@ def whitespace_stripper(string):
 selected_column_list = list(map(whitespace_stripper, selected_column_list))
 
 train = pd.read_csv(INPUT_PATH + "/train.tsv", sep="\t")
-dev = pd.read_csv(INPUT_PATH + "/train.tsv", sep="\t")
-test = pd.read_csv(INPUT_PATH + "/train.tsv", sep="\t")
+dev = pd.read_csv(INPUT_PATH + "/dev.tsv", sep="\t")
+test = pd.read_csv(INPUT_PATH + "/test.tsv", sep="\t")
 
 for selected_column in selected_column_list:
     if SHOW_RAW_FREQUENCY:
