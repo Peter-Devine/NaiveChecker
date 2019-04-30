@@ -18,7 +18,7 @@ selected_column_list = SELECTED_COLUMNS_STRING.split(",")
 def whitespace_stripper(string):
     return(string.strip())
 
-selected_column_list = list(map(stripper, selected_column_list))
+selected_column_list = list(map(whitespace_stripper, selected_column_list))
 
 train = pd.read_csv(INPUT_PATH + "/train.tsv", sep="\t")
 dev = pd.read_csv(INPUT_PATH + "/train.tsv", sep="\t")
